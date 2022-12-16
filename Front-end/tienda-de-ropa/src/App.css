@@ -1,5 +1,5 @@
 body {
-  background-image: url("./components/assets/Background.jpg");
+  background: url("./components/assets/Background.jpg") fixed center no-repeat;
   background-size: 100%;
 }
 
@@ -13,30 +13,42 @@ body {
   margin-right: 1vw;
 }
 
-.flex-container {
+.caja {
   display: flex;
-  border: 1px solid black;
-  background: rgb(255, 255, 255);
-  opacity: 0.8;
-  padding: 20px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  width: 55%;
-}
-.flex-container .caja {
-  border: 1px solid rgb(255, 255, 255);
-  background-color: rgb(208, 208, 208);
+  justify-content: center;
   color: black;
-  width: 14%;
   height: auto;
-  line-height: 120px;
-  text-align: center;
+  width: 100vw;
   margin: 5px;
 }
-.flex-container .caja .card {
-  width: 18rem;
+.caja .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+  background-color: #ffffff;
+  opacity: 0.9;
+  border-radius: 1%;
+}
+.caja .cards .card {
+  flex: 0 0 200px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  opacity: 1 !important;
+}
+.caja .cards .card img {
+  max-width: 100%;
+}
+.caja .cards .card .text {
+  padding: 0 20px 20px;
+}
+.caja .cards .card .text button {
+  background: gray;
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
 }
 
 .Navbar {
