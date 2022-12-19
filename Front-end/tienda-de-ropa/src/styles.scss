@@ -1,6 +1,7 @@
 body{
     background: url("./components/assets/Background.jpg") fixed center no-repeat;
     background-size: 100%;
+    overflow-x: hidden;
 }
 
 .TitleImage{
@@ -34,17 +35,31 @@ body{
                 border: 1px solid #ccc;
                 box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
                 opacity: 1 !important;
-                img {
+
+                .imageProduct {
                     max-width: 100%;
+                    -webkit-transition: 0.4s ease;
+                    transition: 0.4s ease;
+
                 }
+
+                .imageProduct:hover{
+                    -webkit-transform: scale(1.03);
+                    transform: scale(1.03);
+                }
+
                 .text{
                     padding: 0 20px 20px;
                     button{
-                        background: gray;
+                        background: rgb(158, 158, 158);
                         border: 0;
                         color: white;
                         padding: 10px;
                         width: 100%;
+
+                    }
+                    button:hover{
+                        background: rgb(105, 105, 105);
                     }
                 }
             }
@@ -56,6 +71,39 @@ body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
     .NavButton{
         margin-right: 5px;
+    }
+}
+
+.Form{
+    background-color: rgb(1, 49, 66);
+    color: white;
+    border: 10px solid rgb(1, 49, 66);
+    box-shadow: 5px 5px 30px rgb(224, 223, 223);
+    margin: 1rem 1rem 2rem 1rem;
+    border-radius: 1rem;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 1vw;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-bottom: 2rem;
+}
+
+.Title{
+    display: flex;
+    justify-content: center;
+    margin-top: 1vw;   
+}
+
+.FAQ{
+
+    .AccordionFAQ{
+    margin-top: 1vw;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-bottom: 2rem;
     }
 }
 

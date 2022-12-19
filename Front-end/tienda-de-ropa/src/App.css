@@ -1,6 +1,7 @@
 body {
   background: url("./components/assets/Background.jpg") fixed center no-repeat;
   background-size: 100%;
+  overflow-x: hidden;
 }
 
 .TitleImage {
@@ -37,18 +38,27 @@ body {
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
   opacity: 1 !important;
 }
-.caja .cards .card img {
+.caja .cards .card .imageProduct {
   max-width: 100%;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.caja .cards .card .imageProduct:hover {
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
 }
 .caja .cards .card .text {
   padding: 0 20px 20px;
 }
 .caja .cards .card .text button {
-  background: gray;
+  background: rgb(158, 158, 158);
   border: 0;
   color: white;
   padding: 10px;
   width: 100%;
+}
+.caja .cards .card .text button:hover {
+  background: rgb(105, 105, 105);
 }
 
 .Navbar {
@@ -56,6 +66,36 @@ body {
 }
 .Navbar .NavButton {
   margin-right: 5px;
+}
+
+.Form {
+  background-color: rgb(1, 49, 66);
+  color: white;
+  border: 10px solid rgb(1, 49, 66);
+  box-shadow: 5px 5px 30px rgb(224, 223, 223);
+  margin: 1rem 1rem 2rem 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 1vw;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  margin-bottom: 2rem;
+}
+
+.Title {
+  display: flex;
+  justify-content: center;
+  margin-top: 1vw;
+}
+
+.FAQ .AccordionFAQ {
+  margin-top: 1vw;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  margin-bottom: 2rem;
 }
 
 .FooterStyles {

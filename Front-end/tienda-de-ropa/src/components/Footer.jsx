@@ -8,21 +8,17 @@ function Footer() {
       <div className="FooterStyles">
         <footer className="footer-distributed">
           <div className="footer-left">
-            <h3>
+            <h3 href="./">
               <img src={logo} width="60" height="60" />
               La Dispute
             </h3>
 
             <p className="footer-links">
-              <a href="#" className="link-1">
+              <a href="./" className="link-1">
                 Home
               </a>
 
-              <a href="#">About us</a>
-
-              <a href="#">Faq</a>
-
-              <a href="#">Contact</a>
+              <a href="./FAQ">Faq</a>
             </p>
 
             <p className="footer-company-name">La Dispute © 2022</p>
