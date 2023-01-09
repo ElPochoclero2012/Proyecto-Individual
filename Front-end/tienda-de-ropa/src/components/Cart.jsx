@@ -1,4 +1,5 @@
 import React from 'react' ;
+import { Link } from 'react-router-dom';
 import { useCart } from "react-use-cart";
 
 const Cart = () => {
@@ -18,7 +19,7 @@ const Cart = () => {
             return(
               <tr key={index}>
                 <td>
-                  <img src={item.image} style={{height: '6rem'}} />
+                  <img src={item.image} alt="ItemImage" style={{height: '6rem'}} />
                 </td>
                 <td>{item.name}</td>
                 <td>${item.price}</td>
@@ -38,7 +39,7 @@ const Cart = () => {
         </div>
         <div className="col-auto">
               <button className="btn btn-danger m-2" onClick={() => emptyCart()}>Clear Cart</button>
-              <a href="./Cart/Checkout"><button className="btn btn-primary m-2">Check out</button></a>
+              <Link to="/"><button className="btn btn-primary m-2" onClick={() => emptyCart()}>Check out</button></Link>
         </div>
       </div>
     </section> 

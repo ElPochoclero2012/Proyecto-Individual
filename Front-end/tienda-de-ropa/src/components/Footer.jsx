@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import logo from "./assets/logo.png";
 
@@ -8,17 +9,19 @@ function Footer() {
       <div className="FooterStyles">
         <footer className="footer-distributed">
           <div className="footer-left">
-            <h3 href="./">
-              <img src={logo} width="60" height="60" />
+            <Link to="/">
+            <h3>
+              <img src={logo} alt="Logo" width="60" height="60" />
               La Dispute
             </h3>
+            </Link>
 
             <p className="footer-links">
-              <a href="./" className="link-1">
-                Home
-              </a>
+              <Link to="/">Home</Link>
 
-              <a href="./FAQ">Faq</a>
+              <Link to="/FAQ">Faq</Link>
+
+              <Link to="/AboutUs">About us</Link>
             </p>
 
             <p className="footer-company-name">La Dispute © 2022</p>

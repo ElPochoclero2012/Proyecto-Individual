@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { useCart } from 'react-use-cart';
 
-const ProductFormatter = (props) => {
+const ProductFormatterEach = (props) => {
 
     const { addItem } = useCart();
 
   return (
 
     <div className="card" key={props.index}>
-        <Link to={"/ProductInfo/" + props.element.id}> <img src={props.element.image} alt="ProductImage" className="imageProduct" /> </Link>
+        <img src={props.element.image} alt="ProductImage" className="imageProduct" />
         <div class="text">
             <h5>{props.element.name}</h5>
             <p>${props.element.price}</p>
@@ -19,4 +19,4 @@ const ProductFormatter = (props) => {
   )
 }
 
-export default ProductFormatter
+export default ProductFormatterEach

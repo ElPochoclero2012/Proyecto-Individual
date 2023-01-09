@@ -1,11 +1,18 @@
 import React, {useState} from "react";
+import { Navigate, useNavigate} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from 'react-bootstrap/Form';
+import { useContext } from "react";
+import { userContext } from "../provider/userContext";
 
 function Login() {
 
     const [inputs, setInputs] = useState({});
     
+    const user = useContext(userContext);
+
+    const navigate = useNavigate();
+
     const handleChange = (e) => {
       const name = e.target.name;
       const value = e.target.value;
@@ -21,7 +28,13 @@ function Login() {
       body:JSON.stringify(inputs)
     }).then((res) => 
       res.json() 
-    ).then(data => console.log(data))
+    ).then(data => {
+      localStorage.setItem('user', JSON.stringify(data.user));
+      localStorage.setItem('token', data.tokenAccess);
+      let logged = data.user;
+      user.setUser(logged);
+      navigate("/");
+    })
     .catch((err) => console.log(err))
   }
 

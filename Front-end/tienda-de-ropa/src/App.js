@@ -1,11 +1,14 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CartProvider } from 'react-use-cart';
+import { userContext } from './provider/userContext';
 import NavBar from './components/NavBar';
 import Title from './components/Title';
 import Homepage from './components/Homepage';
+import AboutUs from './components/AboutUs';
+import ProductInfo from './components/ProductInfo';
 import FAQ from './components/FAQ';
 import Search from './components/Search';
 import Login from './components/Login';
@@ -21,19 +24,37 @@ import Footer from './components/Footer';
 
 
 
+
 function App() {
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const userLogged = JSON.parse(localStorage.getItem('user'));
+    if(!userLogged){
+      setUser(null);
+    } else{
+      setUser(userLogged);
+    }
+  }, [])
+  
+
   return (
     <>
+    <userContext.Provider value={{user, setUser}}>
+    <BrowserRouter>
     <CartProvider>
       <header>
         <NavBar />
       </header>
       <body>
         <Title />
-        <BrowserRouter>
+        
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/Search/:filter" element={<Search />} />
+            <Route path="/AboutUs" element={<AboutUs />} />
+            <Route path="/ProductInfo/:id" element={<ProductInfo />} />
             <Route path="/FAQ" element={<FAQ />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Register" element={<Register />} />
@@ -45,10 +66,12 @@ function App() {
             <Route path="/Cart" element={<Cart />} />
             <Route path="/AddProduct" element={<AddProduct/>} />
           </Routes>
-        </BrowserRouter>
+
       </body>
         <Footer />
       </CartProvider>
+      </BrowserRouter>
+      </userContext.Provider>
     </>
   );
 }

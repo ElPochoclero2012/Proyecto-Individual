@@ -2,6 +2,7 @@ body {
   background: url("./components/assets/Background.jpg") fixed center no-repeat;
   background-size: 100%;
   overflow-x: hidden;
+  height: 100%;
 }
 
 .TitleImage {
@@ -98,8 +99,35 @@ body {
   margin-bottom: 2rem;
 }
 
+.AboutUsBox {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 100vw;
+  margin: 5px;
+}
+.AboutUsBox .AboutUs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 60%;
+}
+.AboutUsBox .AboutUs .eachOneOfUs {
+  flex: 0 0 140px;
+  margin: 0px;
+  text-align: center;
+}
+.AboutUsBox .AboutUs .eachOneOfUs .photo {
+  width: 12vw;
+  height: 12vw;
+  border-radius: 100%;
+  border: 2px solid rgb(0, 0, 0);
+}
+
 .FooterStyles {
   font-family: Open Sans;
+  height: auto !important;
+  min-height: 100%;
   /* Footer left */
   /* The company logo */
   /* Footer links */

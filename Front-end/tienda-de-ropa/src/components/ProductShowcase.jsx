@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import ProductFormatter from "./ProductFormatter";
 
 function ProductShowcase() {
