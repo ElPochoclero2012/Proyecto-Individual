@@ -10,7 +10,7 @@ const ProductFormatter = (props) => {
 
     <div className="card" key={props.index}>
         <Link to={"/ProductInfo/" + props.element.id}> <img src={props.element.image} alt="ProductImage" className="imageProduct" /> </Link>
-        <div class="text">
+        <div className="text">
             <h5>{props.element.name}</h5>
             <p>${props.element.price}</p>
             <button onClick={() => addItem(props.element)}>Add to cart!</button>

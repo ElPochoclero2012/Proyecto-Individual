@@ -23,7 +23,7 @@ function ProductInfo()  {
   return (
     <>
       <div className="caja">
-        <div className="cards"> 
+        <div className="cardsUnique"> 
           {product.map((e, key) => {
             return (
               <ProductFormatterEach element={e} key={key} />

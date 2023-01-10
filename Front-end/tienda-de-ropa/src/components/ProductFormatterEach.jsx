@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/esm/Button';
 import { useCart } from 'react-use-cart';
 
 const ProductFormatterEach = (props) => {
@@ -8,12 +8,12 @@ const ProductFormatterEach = (props) => {
 
   return (
 
-    <div className="card" key={props.index}>
+    <div className="ProductInfo" key={props.index}>
         <img src={props.element.image} alt="ProductImage" className="imageProduct" />
-        <div class="text">
+        <div className="textProductInfo">
             <h5>{props.element.name}</h5>
             <p>${props.element.price}</p>
-            <button onClick={() => addItem(props.element)}>Add to cart!</button>
+            <Button variant="outline-info" onClick={() => addItem(props.element)}>Add to cart!</Button>
         </div>
     </div>
   )

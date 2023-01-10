@@ -13,11 +13,11 @@ const Cart = () => {
       <div classNamer="row justify-content-center">
         <div className="col-12">
           <h5>Cart ({totalUniqueItems}) Total Items: ({totalItems})</h5>
-          <table className="table table-light table-hover m-0">
+          <table className="table  table-hover m-0" style={{background:'rgb(251, 170, 170)'}} >
             <tbody>
             {items.map((item, index)=>{
             return(
-              <tr key={index}>
+              <tr key={index} >
                 <td>
                   <img src={item.image} alt="ItemImage" style={{height: '6rem'}} />
                 </td>

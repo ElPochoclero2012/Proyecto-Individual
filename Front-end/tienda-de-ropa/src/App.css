@@ -1,8 +1,6 @@
 body {
   background: url("./components/assets/Background.jpg") fixed center no-repeat;
-  background-size: 100%;
   overflow-x: hidden;
-  height: 100%;
 }
 
 .TitleImage {
@@ -22,6 +20,15 @@ body {
   height: auto;
   width: 100vw;
   margin: 5px;
+}
+.caja .cardsUnique {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 30%;
+  background-color: #ffffff;
+  border-radius: 10%;
+  margin-bottom: 50px;
 }
 .caja .cards {
   display: flex;
@@ -53,6 +60,7 @@ body {
 }
 .caja .cards .card .text button {
   background: rgb(158, 158, 158);
+  border-radius: 8%;
   border: 0;
   color: white;
   padding: 10px;
@@ -122,6 +130,21 @@ body {
   height: 12vw;
   border-radius: 100%;
   border: 2px solid rgb(0, 0, 0);
+}
+
+.ProductInfo {
+  display: flex;
+  justify-content: center;
+}
+.ProductInfo .imageProduct {
+  width: 20vw;
+  height: 20vw;
+}
+.ProductInfo .textProductInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .FooterStyles {
