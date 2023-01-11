@@ -7,8 +7,6 @@ function Flags() {
 
     useEffect(() => {
   
-  
-      
       fetch('http://localhost:5050/product')
             .then(res => res.json())
             .then(data => data.data)

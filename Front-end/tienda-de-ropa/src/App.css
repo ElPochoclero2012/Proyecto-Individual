@@ -58,17 +58,6 @@ body {
 .caja .cards .card .text {
   padding: 0 20px 20px;
 }
-.caja .cards .card .text button {
-  background: rgb(158, 158, 158);
-  border-radius: 8%;
-  border: 0;
-  color: white;
-  padding: 10px;
-  width: 100%;
-}
-.caja .cards .card .text button:hover {
-  background: rgb(105, 105, 105);
-}
 
 .Navbar {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif !important;

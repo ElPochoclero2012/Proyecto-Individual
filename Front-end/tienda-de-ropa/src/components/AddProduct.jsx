@@ -12,6 +12,7 @@ function AddProduct() {
       category:1
     })
 
+
     const handleChange = (e) => {
 
       if(e.target.name === 'image'){
@@ -43,7 +44,7 @@ function AddProduct() {
         method:'POST',
         body: formData,
       }).then((res) => 
-        res.json() 
+        res.json()
       ).then(data => console.log(data))
       .catch((err) => console.log(err))
       
@@ -79,7 +80,7 @@ function AddProduct() {
 
       <Form.Group>
         <Form.Label>Add a image</Form.Label>
-        <Form.Control type="file" name="image" onChange={handleChange} placeholder="Add an image" required /> <br/>
+        <Form.Control type="file" name="image" onChange={handleChange} required /> <br/>
       </Form.Group>
 
 
@@ -87,6 +88,7 @@ function AddProduct() {
       <Button variant="success" type="submit" className="SubmitButton">
         Submit!
       </Button>
+      
 
     </Form>
     </>

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Navigate, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from 'react-bootstrap/Form';
 import { useContext } from "react";
@@ -35,7 +35,10 @@ function Login() {
       user.setUser(logged);
       navigate("/");
     })
-    .catch((err) => console.log(err))
+    .catch((err) => {
+      console.log(err)
+      navigate("/Login");
+    })
   }
 
   return (
