@@ -1,8 +1,11 @@
 import React, {useState} from "react";
+import {useNavigate, Link} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from 'react-bootstrap/Form';
 
 function Register() {
+
+  const navigate = useNavigate();
 
   const [inputs, setInputs] = useState({});
 
@@ -16,7 +19,6 @@ function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(inputs);
     
     fetch('http://localhost:5050/user',{
       method:'POST',
@@ -24,7 +26,10 @@ function Register() {
       body:JSON.stringify(inputs)
     }).then((res) => 
       res.json() 
-    ).then(data => console.log(data))
+    ).then(data => {
+      navigate("/login");
+      console.log(data)
+    })
     .catch((err) => console.log(err))
   }
 

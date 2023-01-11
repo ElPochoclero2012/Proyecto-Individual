@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, Link} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from 'react-bootstrap/Form';
 import { useContext } from "react";
@@ -71,7 +71,7 @@ function Login() {
           required
         />
         <Form.Text className="text-muted">
-          You don't have an account? <a href="./register">Sign up!</a>
+          You don't have an account? <Link to="/register">Sign up!</Link>
         </Form.Text>
       </Form.Group>
 
