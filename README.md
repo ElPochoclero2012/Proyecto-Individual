@@ -4,7 +4,7 @@ Hace falta crear las categorias con postman, son las siguientes y por el momento
 POST "http://localhost:5050/Category"
 
 
-{
+        {
             "name": "T-shirts"
         },
         {
@@ -19,4 +19,3 @@ POST "http://localhost:5050/Category"
         {
             "name": "Vinyl"
         }
-}
